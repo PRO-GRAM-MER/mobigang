@@ -1,0 +1,287 @@
+@import '/src/mixins.scss';
+@import '/src/variable.scss';
+
+.wrapper {
+  background: #12173A;
+ 
+  @include tablet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 52px;
+  padding: 40px 16px 80px;
+
+  @include tablet {
+    padding: 64px 56px 116px;
+  }
+
+  &__tablet {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    row-gap: 52px;
+
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      column-gap: 48px;
+    }
+
+  }
+
+  &__reqcall {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 28px;
+
+    &-title {
+      font-family: 'Poppins', serif;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 16px;
+      color: #FFFFFF;
+
+      @include tablet {
+        @include fontParams (22px, 33px, 600, #FFFFFF);
+      }
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &-callreq {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      row-gap: 16px;
+
+    }
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      row-gap: 12px;
+
+      @include tablet {
+        row-gap: 14px;
+      }
+    }
+
+    &-label {
+      position: relative;
+    }
+
+    &-span {
+      display: none;
+    }
+
+    &-input {
+      width: 100%;
+      font-family: 'Poppins', serif;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 10px;
+      letter-spacing: 0.5px;
+      color: #778289;
+      padding: 10px 130px 10px 16px;
+      background: #FFFFFF;
+      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.06);
+      border-radius: 4px;
+      border: none;
+      outline: none;
+
+      @include tablet {
+        @include fontParams(14px, 20px, 400, #778289);
+        padding: 16px 130px 16px 16px;
+      }
+
+      &.ng-invalid.ng-touched {
+        background: #FFECEC;
+        border: 1px solid #F24E1E;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.06);
+        border-radius: 4px;
+
+        &::placeholder {
+          color: rgba(242, 78, 30, 0.25);
+
+        }
+
+        &+.footer__form-span {
+          display: block;
+          top: 25%;
+          right: 4%;
+          bottom: 0;
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          background-image: url(../../assets/alert.png);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+
+        }
+      }
+    }
+
+    &-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #FF6F3F;
+      border-radius: 5px;
+      font-family: 'Poppins', serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 11px;
+      text-align: center;
+      color: #FFFFFF;
+      padding: 16px 135px;
+      cursor: pointer;
+
+      &-disabled {
+        background: #FFD9CC;
+        pointer-events: none;
+
+
+      }
+
+    }
+  }
+
+  &__modal {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    background: #12173A;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    padding: 26px 54px;
+    text-align: center;
+    top: 44px;
+    right: 0;
+    left: 0;
+    @include tablet {
+      padding: 36px 24px 64px;
+      right: 296px;
+
+    }
+    &-img {
+      display: block;
+      width: 60px;
+      height: 60px;
+    }
+    &-msg {
+      @include fontParams(14px, 21px, 400);
+      color: #fff;
+    }
+  }
+
+  &__social {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include tablet {
+      flex-direction: column;
+      row-gap: 28px;
+      align-items: flex-start;
+    }
+
+    &-title {
+      font-family: 'Poppins', serif;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 17px;
+      color: #FFFFFF;
+
+      @include tablet {
+        @include fontParams (22px, 33px, 600, #FFFFFF);
+      }
+    }
+
+    &-icons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      column-gap: 20px;
+    }
+
+    &-icon {
+      display: block;
+      width: 18px;
+      height: 18px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      cursor: pointer;
+      text-decoration: none;
+
+      @include tablet {
+        width: 26px;
+        height: 26px;
+      }
+    }
+  }
+
+  &__company {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 44px;
+
+    &-container {
+      display: flex;
+      width: 224px;
+      flex-direction: column;
+      row-gap: 20px;
+      @include tablet {
+        width: unset;
+      }
+
+    }
+
+    &-title {
+      font-family: 'Poppins', serif;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 15px;
+      color: #FFFFFF;
+    }
+
+    &-links {
+      display: flex;
+      flex-direction: column;
+      row-gap: 12px;
+
+    }
+
+    &-link {
+      font-family: 'Poppins', serif;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 14px;
+      color: #FFFFFF;
+      padding-bottom: 4px;
+
+    }
+
+  }
+}

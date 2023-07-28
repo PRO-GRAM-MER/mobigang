@@ -1,0 +1,32 @@
+@import '/src/mixins.scss';
+@import '/src/variable.scss';
+
+
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__img {
+      display: block;
+      width: 260px;
+      height: 225px;
+
+      @include desktop {
+        width: 352px;
+        height: 305px;
+
+      }
+    }
+
+  }
+
+
+}

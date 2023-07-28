@@ -1,0 +1,7 @@
+<div class="diagnostics" *ngFor="let diagnostic of diagnostics">
+  <div class="diagnostics__head">
+    <h1 class="diagnostics__head__title">{{diagnostic.title}}</h1>
+    <p class="diagnostics__head__desc">{{diagnostic.desc}}</p>
+  </div>
+  <img [src]="diagnostic.imgUrl" alt="" class="diagnostics__img">
+</div>

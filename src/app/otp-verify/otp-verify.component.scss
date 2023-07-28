@@ -1,0 +1,125 @@
+@import '/src/mixins.scss';
+@import '/src/variable.scss';
+
+.otp {
+  @include flexCol;
+  row-gap: 28px;
+  align-items: center;
+  padding: 36px 16px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 20px rgba(39, 39, 39, 0.2);
+  border-radius: 8px;
+
+  @include tablet {
+    padding: 44px 112px;
+  }
+
+  &__head {
+    @include flexCol;
+    row-gap: 24px;
+  }
+
+  &__title {
+    @include fontParams(22px, 33px, 600, $head_color);
+    text-align: center;
+
+    @include tablet {
+      @include fontParams(22px, 36px, 600, $title_color);
+
+    }
+  }
+
+  &__msg {
+    @include fontParams(14px, 23px, 400, rgba(47, 53, 103, 0.75));
+    text-align: center;
+
+    @include tablet {
+      @include fontParams(16px, 24px, 400, rgba(47, 53, 103, 0.75));
+
+    }
+
+  }
+
+  &__box {
+    @include flexCol;
+    row-gap: 28px;
+    justify-content: center;
+    align-items: center;
+
+    &__form {
+      @include flexCol;
+      row-gap: 28px;
+      justify-content: center;
+      align-items: center;
+
+      &__content {
+        @include flexRow;
+        column-gap: 20px;
+        justify-content: center;
+
+      }
+
+      &__input {
+        width: 44px;
+        height: 44px;
+        background: #FFFFFF;
+        border: 1px solid rgba(39, 39, 39, 0.25);
+        border-radius: 6px;
+        outline: none;
+        padding: 14px 16px;
+
+        &.ng-invalid.ng-touched {
+          border: 1px solid #F24E1E;
+
+        }
+      }
+
+      &__resend {
+        display: flex;
+        column-gap: 4px;
+
+        &-desc {
+          @include fontParams(12px, 18px, 400, rgba(47, 53, 103, 0.75));
+          @include tablet {
+            @include fontParams(14px, 21px, 400, rgba(47, 53, 103, 0.75));
+
+          }
+        }
+
+        &-btn {
+          cursor: pointer;
+          @include fontParams(12px, 18px, 400, $btn_primary);
+          color: #FF6F3F;
+          @include tablet {
+            @include fontParams(14px, 21px, 400, #FF6F3F);
+
+          }
+        }
+      }
+
+      &-btn {
+        background: #FFD9CC;
+        border-radius: 5px;
+        @include fontParams(16px, 24px, 600, $btn_secondary);
+        @include flexRow;
+        justify-content: center;
+        padding: 14px 136px;
+        cursor: none;
+        color: #FFFFFF;
+
+        &-active {
+          cursor: pointer;
+          background: $btn_primary;
+
+        }
+      }
+    }
+
+  }
+
+  &__btn {
+    @include fontParams(16px, 24px, 600, $btn_primary);
+    @include flexRow;
+
+  }
+}

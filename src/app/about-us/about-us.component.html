@@ -1,0 +1,51 @@
+<div class="aboutUs">
+  <div class="aboutUs__landing">
+    <app-landing [headings]="headings"></app-landing>
+  </div>
+  <div class="aboutUs__offerings">
+    <app-offerings [offers]="offers"></app-offerings>
+  </div>
+  <div class="aboutUs__intro">
+    <div class="aboutUs__intro__container">
+      <div class="aboutUs__intro__content">
+        <div class="aboutUs__intro__content__head">
+          <h4 class="aboutUs__intro__content__head-title">
+            Introducing B2B Platform for Pre-owned devices
+          </h4>
+        </div>
+        <p class="aboutUs__intro__content__head-desc">MobiGarage is a pre-owned business scaling platform. Established
+          in 2019, it has been a pioneer in bringing refurbished smartphones to the tier 2, 3, & beyond markets. It is
+          an organized platform that successfully integrates the existing extensive retail footprint of phone sellers
+          and repair kiosks. MobiGarage is increasing the accessibility to quality and affordable smartphones for its
+          end customer. It is shortening the gaps in the stock inventory and prices which are usually experienced in the
+          unorganized pre-owned device industry.</p>
+      </div>
+      <a routerLink="/products" class="aboutUs__intro-btn">See products &#8594;</a>
+    </div>
+  </div>
+  <div class="aboutUs__vision">
+    <app-vision [visions]="visions"></app-vision>
+  </div>
+  <div class="aboutUs__mission">
+    <app-mission [missions]="missions"></app-mission>
+  </div>
+  <div class="aboutUs__culture">
+    <div class="aboutUs__culture__head">
+      <h4 class="aboutUs__culture__head-desc">Welcome to a team of <br>creators & innovators.</h4>
+
+    </div>
+    <div class="aboutUs__culture__content">
+      <app-culture [cultures]="cultures"></app-culture>
+    </div>
+  </div>
+  <div class="aboutUs__partners">
+    <div class="aboutUs__partners__head">
+      <p class="aboutUs__partners__head-desc">Meet our supporting investors</p>
+    </div>
+    <div class="aboutUs__partners__carousel">
+      <app-partner-slide [partners]="partners"></app-partner-slide>
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,270 @@
+@import '/src/mixins.scss';
+@import '/src/variable.scss';
+
+.register {
+  @include flexCol;
+  row-gap: 36px;
+  justify-content: center;
+  padding: 36px 16px 40px;
+  @include tablet {
+    padding:  44px 168px 100px;
+  }
+
+  &__title {
+    @include fontParams(22px, 33px, 600, $head_color);
+    @include flexRow;
+    @include tablet {
+      @include fontParams(24px, 36px, 600, $head_color);
+
+    }
+
+  }
+
+  &__form {
+    @include flexCol;
+    justify-content: center;
+    row-gap: 24px;
+  }
+
+  &__prsnl {
+    @include flexCol;
+    row-gap: 24px;
+    justify-content: center;
+
+    &-title {
+      @include fontParams(14px, 21px, 400, rgba(47, 53, 103, 0.75));
+      @include flexRow;
+      @include tablet {
+        @include fontParams(20px, 30px, 500, rgba(47, 53, 103, 0.75));
+
+      }
+    }
+
+    &__info {
+      @include flexCol;
+      row-gap: 12px;
+
+    }
+
+    &__content {
+      @include flexRow;
+      column-gap: 12px;
+    }
+
+    &__details {
+      position: relative;
+      @include flexRow;
+      justify-content: center;
+
+      &-fname {
+        width: 50%;
+      }
+
+      &__label {
+        display: inline-block;
+        width: 100%;
+      }
+
+      &__input {
+        @include fontParams(14px, 21px, 400, #27272799);
+        width: 100%;
+        background: #FFFFFF;
+        border: 1px solid rgba(39, 39, 39, 0.25);
+        border-radius: 4px;
+        padding: 16px 40px 20px 16px;
+        outline: none;
+        &::placeholder {
+          @include fontParams(14px, 21px, 400, #27272740);
+
+        }
+
+        &.ng-invalid.ng-touched {
+          background: #FFECEC;
+          border: 1px solid #F24E1E;
+          box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.06);
+          border-radius: 4px;
+
+          &::placeholder {
+            color: rgba(242, 78, 30, 0.25);
+
+          }
+
+          &+.register__prsnl__details__alert-active {
+            bottom: 0;
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-image: url(../../assets/alert.png);
+            @include bckgrndImg;
+            cursor: none;
+            right: 5%;
+            top: 30%;
+          }
+
+        }
+
+      }
+
+      &__radio {
+        &__label {
+          background: rgba(47, 53, 103, 0.1);
+          border-radius: 8px;
+          @include fontParams(14px, 21px, 400, $head_color);
+          @include flexRow;
+          justify-content: center;
+          padding: 24px 44px;
+          cursor: pointer;
+
+        }
+
+        &__input {
+          display: none;
+
+          &:checked+.register__prsnl__details__radio__label {
+            background: #2F3567;
+            color: #EAEBF0;
+
+          }
+        }
+      }
+    }
+
+    &__mob {
+      position: relative;
+      @include flexRow;
+
+      &__label {
+        width: 100%;
+
+      }
+
+      &__input {
+        position: relative;
+        width: 100%;
+        padding-left: 60px;
+        @include fontParams(14px, 21px, 400, #27272740);
+
+        &-email {
+          width: 100%;
+        }
+
+      }
+
+      &__static {
+        position: absolute;
+        left: 16px;
+        top: 30%;
+        @include fontParams(14px, 21px, 400, $title_color);
+
+      }
+    }
+
+  }
+
+  &__otp-btn {
+    @include flexRow;
+    justify-content: center;
+    background: $btn_secondary;
+    border-radius: 5px;
+    @include fontParams(16px, 24px, 600, $white);
+    padding: 14px;
+    cursor: none;
+    @include tablet {
+      @include fontParams(18px, 27px, 600, $white);
+      align-self: center;
+      padding: 14px 80px;
+
+    }
+
+    color: #FFFFFF;
+
+    &-active {
+      cursor: pointer;
+      background: $btn_primary;
+    }
+
+  }
+
+  &__back {
+    width: fit-content;
+    display: block;
+    margin: 0 auto;
+    @include fontParams(16px, 24px, 600, $btn_primary);
+    text-align: center;
+  }
+
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(39, 39, 39, 0.2);
+  z-index: 100;
+  @include flexRow;
+  justify-content: center;
+  padding: 0 24px;
+}
+
+.modal {
+  position: fixed;
+  @include flexCol;
+  justify-content: center;
+  align-items: center;
+  row-gap: 20px;
+  top: 36%;
+  left: 8%;
+  right: 8%;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 20px rgba(39, 39, 39, 0.2);
+  border-radius: 8px;
+  padding: 24px;
+  z-index: 101;
+
+  &__cancel {
+
+    width: 16px;
+    height: 16px;
+    background-image: url(../../assets/modal-cancel.png);
+    @include bckgrndImg;
+    display: flex;
+    align-self: flex-end;
+  }
+
+  &__info {
+    @include flexCol;
+    row-gap: 36px;
+    justify-content: center;
+    align-items: center;
+
+    &__container {
+      @include flexCol;
+      row-gap: 24px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &-title {
+      @include fontParams(18px, 27px, 600, $head_color);
+      @include flexRow;
+      text-align: center;
+    }
+
+    &-desc {
+      @include fontParams(14px, 21px, 400, rgba(47, 53, 103, 0.75));
+      text-align: center;
+    }
+  }
+
+  &__thanks {
+    display: block;
+    width: 80px;
+    height: 80px;
+    @include bckgrndImg;
+    background-image: url(../../assets/thanks.png);
+
+  }
+
+}

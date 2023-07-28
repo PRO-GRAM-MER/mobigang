@@ -1,0 +1,356 @@
+@import '/src/mixins.scss';
+@import '/src/variable.scss';
+
+.products {
+  display: flex;
+  flex-direction: column;
+  row-gap: 44px;
+  justify-content: center;
+  padding-top: 36px;
+  padding-bottom: 100px;
+
+  @include tablet {
+    row-gap: 56px;
+    padding-top: 52px;
+    padding-bottom: 148px;
+  }
+
+  @include desktop {
+    padding-top: 64px;
+    padding-bottom: 200px;
+  }
+
+  &>div:not(:nth-child(3)):not(:nth-child(5)) {
+    padding-left: 16px;
+    padding-right: 16px;
+
+    @include tablet {
+      padding-left: 56px;
+      padding-right: 56px;
+    }
+  }
+
+
+  &__head {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  &__inspection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__brands {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    overflow: hidden;
+    margin-top: -56px;
+
+    @include tablet {
+      row-gap: 48px;
+    }
+
+    @include desktop {
+      row-gap: 68px;
+    }
+
+    &__head {
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+      justify-content: center;
+      align-items: center;
+
+      @include tablet {
+        row-gap: 24px;
+
+      }
+
+      @include desktop {
+        row-gap: 28px;
+      }
+
+      &-title {
+        font-family: 'Poppins', serif;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 27px;
+        text-align: center;
+        color: #2F3567;
+
+        @include tablet {
+          font-size: 20px;
+          line-height: 30px;
+
+        }
+
+        @include desktop {
+          font-size: 24px;
+          line-height: 36px;
+        }
+      }
+
+      &-desc {
+        font-family: 'Poppins', serif;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 160%;
+        text-align: center;
+        color: #272727;
+        padding: 0 72px;
+
+        @include tablet {
+          font-size: 14px;
+          padding: 0 218px;
+        }
+
+        @include desktop {
+          font-size: 16px;
+          padding: 0 288px;
+        }
+
+      }
+    }
+  }
+
+  &__inventory {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    justify-content: center;
+    align-items: center;
+
+    @include tablet {
+      row-gap: 48px;
+    }
+
+    @include desktop {
+      row-gap: 60px;
+
+    }
+
+    &__head {
+      display: flex;
+      flex-direction: column;
+      row-gap: 16px;
+      justify-content: center;
+      align-items: center;
+
+      @include tablet {
+        row-gap: 18px;
+      }
+
+      @include desktop {
+        row-gap: 20px;
+      }
+
+      &-title {
+        font-family: 'Poppins', serif;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 27px;
+        text-align: center;
+        color: #2F3567;
+
+        @include tablet {
+          font-size: 20px;
+          line-height: 30px;
+
+        }
+
+        @include desktop {
+          font-size: 24px;
+          line-height: 36px;
+
+        }
+
+      }
+
+      &-desc {
+        font-family: 'Poppins', serif;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 160%;
+        text-align: center;
+        color: #272727;
+
+        &__break {
+          display: none;
+
+          @include tablet {
+            display: block;
+          }
+        }
+
+        @include tablet {
+          font-size: 14px;
+        }
+
+        @include desktop {
+          font-size: 16px;
+
+        }
+      }
+    }
+  }
+
+  &__callUs {
+    &__content {
+      display: flex;
+      flex-direction: column;
+      row-gap: 14px;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px 60px;
+      background: #F9F9F9;
+
+      @include tablet {
+        flex-direction: row;
+        align-items: center;
+
+      }
+
+    }
+
+
+
+
+    &__title {
+      font-family: 'Poppins', serif;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 21px;
+      text-align: center;
+      color: #272727;
+
+      &__break {
+        display: none;
+      }
+
+      @include tablet {
+        font-size: 16px;
+        line-height: 24px;
+        text-align: left;
+        display: block;
+      }
+
+      @include desktop {
+        font-size: 20px;
+        line-height: 30px;
+      }
+    }
+
+    &__link {
+
+      background: #FF6F3F;
+      border-radius: 4px;
+      padding: 14px 39px;
+      font-family: 'Poppins', serif;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 13px;
+      text-align: center;
+      color: #FFFFFF;
+      cursor: pointer;
+
+      @include tablet {
+        width: 148px;
+        font-size: 16px;
+        line-height: 24px;
+        padding: 16px 0;
+
+        @include desktop {
+          width: 180px;
+          font-size: 18px;
+          line-height: 27px;
+
+        }
+      }
+
+    }
+
+  }
+
+  &__spareParts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__spareType {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    justify-content: center;
+    align-items: center;
+    margin-top: -72px;
+
+    @include tablet {
+      row-gap: 50px;
+    }
+
+    @include desktop {
+      row-gap: 60px;
+    }
+
+    &__head {
+      display: flex;
+      flex-direction: column;
+      row-gap: 16px;
+      justify-content: center;
+      align-items: center;
+
+      @include tablet {
+        row-gap: 18px;
+      }
+
+      @include desktop {
+        row-gap: 20px;
+      }
+
+      &__title {
+        font-family: 'Poppins', serif;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 129.75%;
+        text-align: center;
+        color: #2F3567;
+
+        @include tablet {
+          font-size: 24px;
+        }
+
+        @include desktop {
+          font-size: 24px;
+        }
+      }
+
+      &__desc {
+        font-family: 'Poppins', serif;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 160%;
+        text-align: center;
+        color: #272727;
+
+        @include tablet {
+          font-size: 14px;
+        }
+
+        @include desktop {
+          font-size: 16px;
+        }
+
+      }
+
+    }
+  }
+}

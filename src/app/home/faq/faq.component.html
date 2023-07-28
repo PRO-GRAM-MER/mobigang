@@ -1,0 +1,10 @@
+<section class="faq">
+  <section class="faq__quest" (click)="onSelect()">
+    <h4 class="faq__quest-Q">{{faq.quest}}</h4>
+    <span class="faq__quest-btn" [ngClass]="{'faq__quest-btn-close': faq.open}"></span>
+  </section>
+  <section class="faq__ans" [ngClass]="{'faq__ans-active' : faq.open}">
+    <p class="faq__ans-A">{{faq.ans}}</p>
+  </section>
+  <div class="faq__line"></div>
+</section>

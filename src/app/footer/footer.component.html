@@ -1,0 +1,59 @@
+<div class="wrapper">
+  <div class="footer">
+    <section class="footer__tablet">
+      <section class="footer__reqcall">
+        <h4 class="footer__reqcall-title">Request a Call</h4>
+        <section class="footer__form">
+          <form [formGroup]="registerForm" class="footer__form-callreq" (ngSubmit)="onSubmit()">
+            <section class="footer__form-content">
+              <label for="name" class="footer__form-label">
+                <input type="text" class="footer__form-input footer__form-name" id="name" placeholder="Name"
+                  formControlName="name" (keypress)="onlyAlphabets($event)">
+                <div class="footer__form-span"></div>
+              </label>
+              <label for="phone" class="footer__form-label">
+                <input type="text" class="footer__form-input footer__form-number" id="phone" placeholder="Phone No."
+                  (keypress)="onlyNums($event)" maxlength="10" formControlName="phone">
+                  <div class="footer__form-span"></div>
+              </label>
+
+            </section>
+            <button class="footer__form-btn" [ngClass]="{'footer__form-btn-disabled': registerForm.invalid}"
+              type="submit" [disabled]="registerForm.invalid">Submit</button>
+
+          </form>
+          <section class="footer__modal" *ngIf="isModalActive">
+            <img src="../../assets/thanks.png" class="footer__modal-img" alt="alert">
+            <p class="footer__modal-msg">Thanks! We'll contact you soon
+              to schedule your call.
+            </p>
+          </section>
+
+        </section>
+      </section>
+      <section class="footer__social">
+        <h4 class="footer__social-title">Follow Us</h4>
+        <section class="footer__social-icons">
+          <a [href]="icon.link" class="footer__social-icon" *ngFor="let icon of socialMedias; let i = index"
+            [ngStyle]="{'background-image': 'url(' + icon.imgUrl + ')'}">
+          </a>
+
+        </section>
+
+      </section>
+    </section>
+
+    <section class="footer__company">
+      <section class="footer__company-container" *ngFor="let content of contents">
+        <h4 class="footer__company-title">{{content.heading}}</h4>
+        <section class="footer__company-links">
+          <a [href]="subheading.href" class="footer__company-link"
+            *ngFor="let subheading of content.subheadings">{{subheading.title}}</a>
+        </section>
+      </section>
+
+    </section>
+
+  </div>
+
+</div>

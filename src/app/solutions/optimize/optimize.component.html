@@ -1,0 +1,7 @@
+<div class="optimizations" *ngFor="let optimize of optimizations">
+  <div class="optimizations__head">
+    <h1 class="optimizations__head__title">{{optimize.title}}</h1>
+    <p class="optimizations__head__desc">{{optimize.desc}}</p>
+  </div>
+  <img [src]="optimize.imgUrl" alt="" class="optimizations__img">
+</div>

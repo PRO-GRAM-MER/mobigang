@@ -1,0 +1,13 @@
+<div class="offerings">
+  <div class="offerings__content">
+    <div *ngFor="let offer of offers; let i = index" class="offerings__slide"
+      [class.offerings__slide-active]="i === currentSlideIndex">
+      <p [innerHTML]="sanitizeHtml(offer.desc)"></p>
+    </div>
+  </div>
+
+  <div class="offerings__dots">
+    <span *ngFor="let offer of offers; let i = index" class="offerings__dot"
+      [class.offerings__dot-active]="i === currentSlideIndex" (click)="goToSlide(i)"></span>
+  </div>
+</div>

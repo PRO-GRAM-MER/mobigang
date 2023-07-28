@@ -1,0 +1,26 @@
+<div class="test">
+  <div class="test__info">
+    <h1 class="test__info__title">Refurbished smartphones</h1>
+    <p class="test__info__desc">Are you looking for refurbished phones that you could trust 100%? Then you are at the
+      right place!</p>
+  </div>
+  <div class="test__slider" [ngClass]="{'test__slider__move-left': selectedIndex > 0, 'test__slider__move-right': selectedIndex < tests.length - 1}">
+    <div class="test__slider__slide" *ngFor="let test of tests; let i = index"
+      [ngClass]="{'test__slider__slide__active': selectedIndex === i}">
+      <img [src]="test.imgUrl" alt="" class="test__slider__slide_img">
+      <div class="test__slider__slide__info">
+        <h2 class="test__slider__slide__info__title">{{test.title}}</h2>
+        <p class="test__slider__slide__info__desc">{{test.desc}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="test__slider__dots">
+    <span class="test__slider__dots__dot" *ngFor="let dot of tests; let i = index"
+      [ngClass]="{'test__slider__dots__dot__active': selectedIndex === i}" (click)="selectedSlide(i)"></span>
+  </div>
+  <div class="test__slider__arrow">
+    <span class="test__slider__arrow__left" (click)="onPrev()"></span>
+    <span class="test__slider__arrow__right" (click)="onNext()"></span>
+
+  </div>
+</div>

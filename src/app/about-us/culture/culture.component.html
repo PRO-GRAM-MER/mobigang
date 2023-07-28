@@ -1,0 +1,10 @@
+<div class="cultures">
+  <div class="cultures__culture" *ngFor="let culture of cultures">
+    <img [src]="culture.imgUrl" alt="" class="cultures__culture__img">
+    <div class="cultures__culture__info">
+      <h4 class="cultures__culture__info-title">{{culture.title}}</h4>
+      <p class="cultures__culture__info-desc">{{culture.desc}}</p>
+    </div>
+  </div>
+
+</div>

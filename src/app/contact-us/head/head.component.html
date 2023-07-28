@@ -1,0 +1,8 @@
+<div class="head" *ngFor="let heading of headings">
+  <div class="head__info">
+    <h4 class="head__info-title">{{heading.title}}</h4>
+    <p class="head__info__desc">{{heading.desc}}</p>
+
+  </div>
+  <img [src]="heading.imgUrl" class="head__img">
+</div>

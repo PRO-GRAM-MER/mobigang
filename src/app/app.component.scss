@@ -1,0 +1,15 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  &__header {
+    margin-bottom: 64px;
+
+  }
+  &__router {
+    flex-grow: 1;
+
+  }
+  &__footer {
+
+  }
+}

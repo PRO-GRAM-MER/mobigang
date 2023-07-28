@@ -1,0 +1,25 @@
+<div class="spareParts">
+  <div class="spareParts__info">
+    <h1 class="spareParts__info__title">Spare parts</h1>
+    <p class="spareParts__info__desc">We also supply the finest and top-quality smartphone spare parts</p>
+  </div>
+  <div class="spareParts__slider">
+    <div class="spareParts__slider__slide" *ngFor="let sparePart of spareParts; let i = index"
+      [ngClass]="{'spareParts__slider__slide__active': selectedIndex === i}">
+      <img [src]="sparePart.imgUrl" alt="" class="spareParts_slider__slide_img">
+      <div class="spareParts__slider__slide__info">
+        <h2 class="spareParts__slider__slide__info__title">{{sparePart.title}}</h2>
+        <p class="spareParts__slider__slide__info__desc">{{sparePart.desc}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="spareParts__slider__dots">
+    <span class="spareParts__slider__dots__dot" *ngFor="let dot of spareParts; let i = index"
+      [ngClass]="{'spareParts__slider__dots__dot__active': selectedIndex === i}" (click)="selectedSlide(i)"></span>
+  </div>
+  <div class="spareParts__slider__arrow">
+    <span class="spareParts__slider__arrow__left" (click)="onPrev()"></span>
+    <span class="spareParts__slider__arrow__right" (click)="onNext()"></span>
+
+  </div>
+</div>

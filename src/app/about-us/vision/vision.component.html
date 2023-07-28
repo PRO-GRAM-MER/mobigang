@@ -1,0 +1,7 @@
+<div class="vision" *ngFor="let vision of visions; let i = index">
+  <div class="vision__head">
+    <h4 class="vision__head-title">{{vision.title}}</h4>
+    <p class="vision__head-desc">{{vision.desc}}</p>
+  </div>
+  <img [src]="vision.imgUrl" alt="image" class="vision__image">
+</div>

@@ -1,0 +1,8 @@
+<div class="liquids" *ngFor="let liquid of liquids">
+  <div class="liquids__head">
+    <h1 class="liquids__head__title">{{liquid.title}}</h1>
+    <p class="liquids__head__desc">{{liquid.desc}}</p>
+  </div>
+  <img [src]="liquid.imgUrl" alt="" class="liquids__img">
+</div>
+

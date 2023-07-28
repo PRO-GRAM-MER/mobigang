@@ -1,0 +1,715 @@
+@import '/src/mixins.scss';
+@import '/src/variable.scss';
+
+.home {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 48px;
+    padding-bottom: 46px;
+
+    @include tablet {
+      row-gap: 56px;
+      padding-bottom: 64px;
+    }
+
+    @include desktop {
+      row-gap: 60px;
+      padding-bottom: 84px;
+    }
+  }
+
+  &__landing {
+    display: flex;
+    flex-direction: column;
+    row-gap: 48px;
+    background: linear-gradient(154.8deg, #FFD6DF -7.89%, #94CDE4 105.32%);
+    padding: 40px 16px 88px;
+
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 40px 56px 156px;
+    }
+
+    @include desktop {
+      padding: 64px 60px 156px;
+
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      row-gap: 36px;
+      justify-content: center;
+      align-items: center;
+
+      @include tablet {
+        align-items: flex-start;
+      }
+    }
+  }
+
+  &__head {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+
+    @include tablet {
+      align-items: flex-start;
+      row-gap: 24px;
+    }
+
+    @include desktop {
+      row-gap: 30px;
+    }
+
+    &-title {
+      @include fontParams(28px, 36px, 700, $head_color);
+      display: flex;
+      align-items: center;
+      text-align: center;
+
+      @include tablet {
+        @include fontParams(32px, 48px, 700, $head_color);
+        text-align: left;
+      }
+
+      @include desktop {
+        @include fontParams(36px, 48px, 700, $head_color);
+      }
+    }
+
+    &-desc {
+      @include fontParams(14px, 21px, 400, $title_color);
+      text-align: center;
+
+      @include tablet {
+        text-align: left;
+      }
+
+      @include desktop {
+        @include fontParams(16px, 20px, 400, $title_color);
+      }
+    }
+  }
+
+  &__tabs {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+    justify-content: center;
+
+    @include tablet {
+      column-gap: 20px;
+    }
+
+    @include desktop {
+      align-items: start;
+
+    }
+
+    &-register {
+      display: flex;
+      align-items: center;
+      background: $btn_primary;
+      border-radius: 5px;
+      @include fontParams(16px, 24px, 600, $white);
+      padding: 12px 20px;
+      cursor: pointer;
+
+      @include desktop {
+        padding: 16px 40px;
+      }
+    }
+
+    &-call {
+      background: $white;
+      border-radius: 5px;
+      @include fontParams(16px, 24px, 600, $head_color);
+      padding: 12px 45px;
+      cursor: pointer;
+
+      @include desktop {
+        display: none;
+      }
+    }
+  }
+
+  &__carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__achievements {
+    border-radius: 8px;
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    box-shadow: 1px 4px 9px rgba(0, 0, 0, 0.21);
+    overflow: hidden;
+    margin: -136px 16px 0;
+
+    @include tablet {
+      margin: -156px 56px 0;
+    }
+
+    @include desktop {
+      margin: -118px 56px 0;
+
+    }
+  }
+
+  &__partner {
+    background: $white;
+    margin: 0 auto;
+    padding-bottom: 30px;
+
+    @include tablet {
+      margin: 0 0 64px;
+      padding: 0;
+    }
+  }
+
+  &__why {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 16px;
+
+    @include tablet {
+      padding: 0 56px;
+
+    }
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      row-gap: 12px;
+      border: 1px solid #EEEEEE;
+      box-shadow: 1px 4px 9px rgba(0, 0, 0, 0.06);
+      border-radius: 8px;
+      padding-bottom: calc($padY * 2);
+
+      @include tablet {
+        row-gap: 24px;
+        padding-bottom: 36px;
+
+      }
+
+      @include desktop {
+        padding-bottom: 48px;
+
+      }
+    }
+
+    &__head {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      row-gap: 8px;
+      background: #F8F8F8;
+      padding: 24px 48px 0;
+
+      @include tablet {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 56px;
+      }
+
+      @include desktop {
+        padding: 0 124px;
+      }
+
+      &-title {
+        @include fontParams(24px, 19px, 700, $head_color);
+
+        @include tablet {
+          @include fontParams(28px, 42px, 700, $head_color);
+
+        }
+
+        @include desktop {
+          @include fontParams(32px, 48px, 700, $head_color);
+
+        }
+      }
+
+      &-img {
+        display: block;
+        width: 225px;
+        height: 132px;
+
+        @include tablet {
+          width: 313px;
+          height: 178px;
+
+        }
+      }
+
+    }
+
+    &__content {
+      display: flex;
+      align-items: center;
+      padding: 0 18px;
+
+      @include tablet {
+        padding: 0 56px;
+      }
+
+      @include desktop {
+        padding: 0 76px;
+      }
+
+      &-desc {
+        @include fontParams(12px, 18px, 400, #263238);
+      }
+    }
+
+    &-btn {
+      margin: 0 auto;
+      width: fit-content;
+      @include fontParams(20px, 27px, 600, #FF6F3F);
+      cursor: pointer;
+      font-family: 'Poppins', serif;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 15px;
+      background: #FFFFFF;
+      border: 1px solid #EEEEEE;
+      box-shadow: 1px 4px 9px rgba(0, 0, 0, 0.06);
+      border-radius: 8px;
+      padding: 16px 40px;
+    }
+  }
+
+  &__registerNow {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 12px;
+    background: rgba(228, 228, 228, 0.4);
+    padding: 30px 20px;
+
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 26px 92px 36px;
+
+    }
+
+    @include desktop {
+      padding: 30px 131px;
+    }
+
+    &-content {
+      @include fontParams(14px, 17px, 600, $title_color);
+      text-align: center;
+
+      @include tablet {
+        @include fontParams(16px, 24px, 600, $title_color);
+        text-align: left;
+      }
+
+      @include desktop {
+        @include fontParams(20px, 30px, 600, $title_color);
+        text-align: left;
+      }
+
+      &__break {
+        display: none;
+
+        @include tablet {
+          display: block;
+        }
+      }
+
+    }
+
+    &-btn {
+      display: block;
+      @include fontParams(14px, 13px, 600, $white);
+      text-align: center;
+      background: $btn_primary ;
+      border-radius: 4px;
+      padding: $padY $padX;
+      cursor: pointer;
+
+      @include tablet {
+        padding: 17px 21px;
+      }
+
+      @include desktop {
+        @include fontParams(18px, 27px, 600, $white);
+
+      }
+    }
+  }
+
+  &__values {
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+    justify-content: center;
+    align-items: center;
+    padding: 0 28px;
+
+    @include tablet {
+      margin: 0 auto;
+      padding: 0 56px;
+    }
+
+    &-title {
+      @include fontParams(22px, 27px, 700, $head_color);
+      text-align: center;
+
+      @include tablet {
+        @include fontParams(28px, 38px, 700, $head_color);
+
+      }
+      &__br {
+        @include tablet {
+          display: none;
+        }
+      }
+    }
+
+  }
+
+  &__mobi {
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+    justify-content: center;
+    align-items: center;
+    background: #F9F9F9;
+    padding: 40px $padX calc($padY * 5);
+
+    @include tablet {
+      padding: 44px 56px 86px;
+      row-gap: 40px;
+    }
+
+    &-title {
+      @include fontParams(22px, 19px, 700, $head_color);
+      text-align: center;
+
+      @include tablet {
+        @include fontParams(28px, 42px, 700, $head_color);
+      }
+
+      @include desktop {
+        @include fontParams(32px, 48px, 700, $head_color);
+      }
+    }
+  }
+
+  &__bachat {
+    padding: 0 16px;
+
+    @include tablet {
+      padding: 0 48px;
+    }
+
+    @include desktop {
+      padding: 0 56px;
+    }
+
+    &__container {
+      @include tablet {
+        display: none;
+      }
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      row-gap: 8px;
+      padding: calc($padY * 2) 20px 0;
+      background: #FFEFE9;
+      box-shadow: 1px 4px 9px rgba(0, 0, 0, 0.21);
+      border-radius: 8px;
+
+      &-tablet {
+        display: none;
+
+        @include tablet {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          padding: 12px 24px 0;
+          background: #FFEFE9;
+          box-shadow: 1px 4px 9px rgba(0, 0, 0, 0.21);
+          border-radius: 8px;
+
+        }
+
+
+        &__img {
+          display: block;
+          width: 243px;
+          height: 217px
+        }
+
+        &__content {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          row-gap: 32px;
+
+        }
+
+        &__head {
+          display: flex;
+          flex-direction: column;
+          row-gap: 24px;
+
+          &-title {
+            @include fontParams(22px, 33px, 700, $title_color);
+            text-align: center;
+
+          }
+
+          &-desc {
+            @include fontParams(14px, 21px, 400, $title_color);
+            text-align: center;
+
+          }
+        }
+
+        &__btns {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          column-gap: 20px;
+
+          &-btn {
+            width: 170px;
+            height: 50px;
+            @include bckgrndImg;
+            border-radius: 8px;
+            border: 1px solid lightgray;
+            cursor: pointer;
+
+          }
+
+        }
+
+      }
+    }
+
+    &__head {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      row-gap: 12px;
+
+      &-tab {
+        display: flex;
+        flex-direction: column;
+        row-gap: 24px;
+      }
+
+      &-title {
+        @include fontParams(22px, 19px, 700, $title_color);
+        text-align: center;
+      }
+
+      &-desc {
+        @include fontParams(12px, 14px, 400, $title_color);
+        text-align: center;
+      }
+    }
+
+    &__content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      column-gap: 8px;
+
+      &-tab {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 32px;
+      }
+
+      &-img {
+        display: block;
+        width: 130px;
+        height: 130px;
+        @include tablet {
+          width: 243px;
+          height: 192px;
+        }
+        @include desktop {
+          height: 183px;
+        }
+      }
+    }
+
+    &__btns {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      row-gap: 12px;
+
+      &-tab {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 20px;
+      }
+
+      &-tab {
+        display: flex;
+      }
+
+      &-btn {
+        width: 130px;
+        height: 40px;
+        @include bckgrndImg;
+        border-radius: 8px;
+        border: 1px solid lightgray;
+        cursor: pointer;
+      }
+
+      &-g {
+        background-image: url(../../assets/G.png);
+
+        @include tablet {
+          background-image: url(../../assets/g-tab.png);
+
+        }
+      }
+
+      &-a {
+        background-image: url(../../assets/A.png);
+
+        @include tablet {
+          background-image: url(../../assets/a-tab.png);
+
+        }
+      }
+    }
+  }
+
+  &__feedbacks {
+    display: flex;
+    flex-direction: column;
+    row-gap: 36px;
+    justify-content: center;
+    align-items: center;
+    background: #F7F7F7;
+    padding: 64px 16px;
+
+    @include tablet {
+      row-gap: 40px;
+      padding: 44px 122px 48px;
+    }
+    @include desktop {
+      row-gap: 40px;
+      padding: 44px 12px 48px;
+    }
+
+    &-title {
+      @include fontParams(22px, 18px, 700, $head_color);
+      text-align: center;
+
+      @include tablet {
+        @include fontParams(28px, 42px, 700, $head_color);
+      }
+
+      @include desktop {
+        @include fontParams(32px, 48px, 700, $head_color);
+      }
+
+    }
+  }
+
+  &__media {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    justify-content: center;
+    align-items: center;
+    padding: 0 22px 30px;
+
+    @include tablet {
+      row-gap: 55px;
+    }
+
+    @include desktop {
+      row-gap: 60px;
+    }
+
+    &-title {
+      @include fontParams(22px, 21px, 700, $head_color);
+      text-align: center;
+
+      @include tablet {
+        @include fontParams(28px, 42px, 700, $head_color);
+
+      }
+
+      @include tablet {
+        @include fontParams(32px, 48px, 700, $head_color);
+
+      }
+    }
+  }
+
+  &__faqs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 36px;
+    padding: 0 16px;
+
+    @include tablet {
+      row-gap: 46px;
+      padding: 0 56px;
+    }
+
+    &-title {
+      @include fontParams(22px, 17px, 700, $head_color);
+      text-align: center;
+
+      @include tablet {
+        @include fontParams(32px, 48px, 700, $head_color);
+
+      }
+    }
+  }
+
+  &__faq {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 12px;
+    background: #FBFBFB;
+    box-shadow: 1px 4px 12px rgba(121, 121, 121, 0.08);
+    border-radius: 4px;
+    padding: 28px 14px;
+
+    @include tablet {
+      padding: 26px 32px 36px 16px;
+    }
+  }
+}

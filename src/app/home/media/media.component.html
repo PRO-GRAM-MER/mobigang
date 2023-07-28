@@ -1,0 +1,21 @@
+<div class="media">
+  <div class="media__slider">
+    <div class="media__slider__inner" [ngStyle]="{'transform': 'translateX(' + transformValue + ')'}">
+      <div class="media__slider__inner__slide" *ngFor="let media of medias; let i = index">
+        <div class="media__slider__inner__slide__head">
+          <img [src]="media.imgUrl" alt="title" class="media__slider__inner__slide__img">
+          <p class="media__slider__inner__slide__desc">{{media.desc}}</p>
+        </div>
+        <a [href]="media.link" class="media__slider__inner__slide__link" target="_blank">Read More</a>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<div class="media__controls">
+  <button class="media__controls__left" (click)="moveSlider('left')"></button>
+  <button class="media__controls__right" (click)="moveSlider('right')"></button>
+
+
+</div>

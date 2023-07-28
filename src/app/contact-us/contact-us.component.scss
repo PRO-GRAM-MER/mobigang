@@ -1,0 +1,105 @@
+@import '/src/mixins.scss';
+@import '/src/variable.scss';
+
+.contactUs {
+  display: flex;
+  flex-direction: column;
+  row-gap: 44px;
+  align-items: center;
+  justify-content: center;
+  padding: 44px 16px 100px;
+
+  @include tablet {
+    row-gap: 60px;
+    padding: 44px 48px 148px;
+  }
+
+  @include desktop {
+    row-gap: 56px;
+    padding: 44px 48px 152px;
+  }
+
+  &__landing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 28px;
+
+    @include tablet {
+      padding: unset;
+    }
+  }
+
+  &__contacts {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    justify-content: center;
+    align-items: center;
+
+    @include tablet {
+      row-gap: 40px;
+    }
+
+    @include desktop {
+      row-gap: 60px;
+    }
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+      justify-content: center;
+      align-items: center;
+      padding: 0 40px;
+
+      &-title {
+        font-family: 'Poppins', serif;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 32px;
+        text-align: center;
+        color: #FF6F3F;
+
+        @include desktop {
+          font-size: 16px;
+          line-height: 32px;
+        }
+      }
+
+      &-desc {
+        font-family: 'Poppins', serif;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 36px;
+        text-align: center;
+        color: #2F3567;
+
+        @include tablet {
+          font-size: 28px;
+          line-height: 42px;
+        }
+
+        @include desktop {
+          font-size: 32px;
+          line-height: 48px;
+        }
+      }
+    }
+
+    &__cards {
+      width: 100%;
+      padding: 0 24px;
+
+      @include tablet {
+        padding: 0 32px;
+      }
+
+      @include desktop {
+        padding: unset;
+      }
+
+    }
+  }
+}

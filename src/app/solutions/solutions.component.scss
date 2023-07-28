@@ -1,0 +1,73 @@
+@import '/src/mixins.scss';
+@import '/src/variable.scss';
+
+.solutions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 44px;
+  padding-top: 36px;
+  padding-bottom: 100px;
+
+  @include tablet {
+    row-gap: 56px;
+    padding-top: 52px;
+    padding-bottom: 148px;
+  }
+
+  @include desktop {
+    row-gap: 72px;
+    padding-top: 64px;
+    padding-bottom: 200px;
+  }
+  &>div:not(:nth-child(3)):not(:nth-child(5)) {
+    padding-left: 16px;
+    padding-right: 16px;
+
+    @include tablet {
+      padding-left: 56px;
+      padding-right: 56px;
+    }
+  }
+
+  &__head {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__diagnostic {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+  &__decision {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #F9F9F9;
+    padding:  28px 16px 62px;
+
+  }
+  &__optimize {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+  &__liquidate {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #F9F9F9;
+    padding:  28px 16px 62px;
+
+  }
+
+}

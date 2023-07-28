@@ -1,0 +1,75 @@
+@import '/src/mixins.scss';
+@import '/src/variable.scss';
+
+.inventory {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 24px;
+
+  @include tablet {
+    flex-direction: row;
+    column-gap: 20px;
+  }
+
+  @include desktop {
+    column-gap: 10px;
+
+  }
+
+  &__inventories {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 18px;
+
+    @include tablet {
+      row-gap: 20px;
+    }
+
+    @include desktop {
+      row-gap: 24px;
+    }
+
+    &__img {
+      display: block;
+      width: 205px;
+      height: 175px;
+
+      @include tablet {
+        width: 204px;
+        height: 174px;
+      }
+
+      @include desktop {
+        width: 280px;
+        height: 238px;
+      }
+    }
+
+
+    &__title {
+      font-family: 'Poppins', serif;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      text-align: center;
+      color: #272727;
+
+      @include tablet {
+        font-size: 18px;
+        line-height: 27px;
+      }
+
+      @include desktop {
+        font-size: 20px;
+        line-height: 30px;
+      }
+    }
+
+
+  }
+
+}

@@ -1,0 +1,107 @@
+<div class="home">
+  <div class="home__wrapper">
+    <div class="home__landing">
+      <section class="home__landing__content">
+        <section class="home__head">
+          <h1 class="home__head-title">
+            Empowering Bharat's Refurbished Retail Industry
+          </h1>
+          <p class="home__head-desc">Unlock the Potential of Your Pre-Owned Device Business with Our Expertise</p>
+        </section>
+        <section class="home__tabs">
+          <button class="home__tabs-register" (click)="onNavigate()">Register Now</button>
+          <a href="tel:++91 9999123511" class="home__tabs-call">Call Us</a>
+        </section>
+      </section>
+
+      <section class="home__carousel">
+        <app-image-slider [banners]="banners"></app-image-slider>
+      </section>
+    </div>
+    <section class="home__achievements">
+      <app-achievement [achievements]="achievements"></app-achievement>
+    </section>
+
+    <section class="home__partner">
+      <app-partner [partners]="partners"></app-partner>
+    </section>
+    <section class="home__why">
+      <section class="home__why__container" *ngFor="let content of whyWe">
+        <section class="home__why__head">
+          <h4 class="home__why__head-title">{{content.title}}</h4>
+          <img [src]="content.imgUrl" alt="pc" class="home__why__head-img">
+        </section>
+        <section class="home__why__content">
+          <article class="home__why__content-desc">{{content.desc}}</article>
+        </section>
+        <a routerLink="/aboutUs" class="home__why-btn">To know more &#8594;</a>
+      </section>
+    </section>
+    <section class="home__registerNow">
+      <article class="home__registerNow-content">Buying and Selling made easy. Now scale your
+        <br class="home__registerNow-content__break">
+        Pre-Owned Business with MobiGarage.
+      </article>
+      <button class="home__registerNow-btn" (click)="onNavigate()">Register Now</button>
+    </section>
+    <section class="home__values">
+      <h4 class="home__values-title">Our values, 
+        <br class="home__values-title__br">Our promise to you
+      </h4>
+      <app-values [values]="values"></app-values>
+    </section>
+    <section class="home__mobi">
+      <h4 class="home__mobi-title">Why MobiGarage?</h4>
+      <app-mobi [reasons]="reasons"></app-mobi>
+
+    </section>
+    <section class="home__bachat" *ngFor="let content of mobiBachat">
+      <section class="home__bachat__container">
+        <section class="home__bachat__head">
+          <h4 class="home__bachat__head-title">{{content.title}}</h4>
+          <p class="home__bachat__head-desc">{{content.desc}}</p>
+        </section>
+        <section class="home__bachat__content">
+          <img [src]="content.imgUrl" alt="image" class="home__bachat__content-img">
+          <section class="home__bachat__btns">
+            <a class="home__bachat__btns-btn home__bachat__btns-g"></a>
+            <a class="home__bachat__btns-btn home__bachat__btns-a"></a>
+          </section>
+        </section>
+      </section>
+      <section class="home__bachat__container-tablet">
+        <img [src]="content.imgUrl" alt="image" class="home__bachat__container-tablet__img">
+        <section class="home__bachat__container-tablet__content">
+          <section class="home__bachat__container-tablet__head">
+            <h4 class="home__bachat__container-tablet__head-title">{{content.title}}</h4>
+            <p class="home__bachat__container-tablet__head-desc">{{content.desc}}</p>
+          </section>
+          <section class="home__bachat__container-tablet__btns" >
+            <a class="home__bachat__container-tablet__btns-btn home__bachat__btns-g"></a>
+            <a class="home__bachat__container-tablet__btns-btn home__bachat__btns-a"></a>
+
+          </section>
+        </section>
+      </section>
+    </section>
+    <section class="home__feedbacks">
+      <h4 class="home__feedbacks-title">Customer feedback</h4>
+      <app-feedback></app-feedback>
+    </section>
+
+    <section class="home__media">
+      <h4 class="home__media-title">Our Media Presence</h4>
+      <app-media></app-media>
+    </section>
+    <section class="home__faqs">
+      <h4 class="home__faqs-title">FAQ’s</h4>
+      <section class="home__faq">
+        <app-faq *ngFor="let faqEl of faqs" [faq]="faqEl"></app-faq>
+
+      </section>
+
+    </section>
+
+  </div>
+
+</div>

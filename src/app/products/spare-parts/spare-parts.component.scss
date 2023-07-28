@@ -1,0 +1,243 @@
+@import '/src/mixins.scss';
+@import '/src/variable.scss';
+
+.spareParts {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+  justify-content: center;
+  align-items: center;
+
+  @include tablet {
+    row-gap: 48px;
+  }
+
+  @include desktop {
+    row-gap: 60px;
+  }
+
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    justify-content: center;
+    align-items: center;
+
+    @include tablet {
+      row-gap: 24px;
+    }
+
+    @include desktop {
+      row-gap: 28px;
+    }
+
+    &__title {
+      font-family: 'Poppins', serif;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 31px;
+      text-align: center;
+      color: #2F3567;
+
+      @include tablet {
+        font-size: 28px;
+        line-height: 36px;
+
+      }
+
+      @include desktop {
+        font-size: 32px;
+        line-height: 42px;
+
+      }
+    }
+
+    &__desc {
+      font-family: 'Poppins', serif;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 160%;
+      text-align: center;
+      color: #272727;
+
+      @include desktop {
+        font-size: 16px;
+
+      }
+    }
+
+  }
+
+  &__slider {
+    display: flex;
+    width: 320px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    background: #FFFFFF;
+    transition: transform 0.5s ease;
+    @include tablet {
+      width: 500px;
+      height: 200px;
+    }
+    @include desktop {
+      height: 240px;
+    }
+
+    &__slide {
+      display: none;
+
+      &__active {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        flex-direction: column;
+        row-gap: 12px;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #EEEEEE;
+        border-radius: 10px;
+        padding: 24px 0;
+        @include tablet {
+          width: 100%;
+          row-gap: 16px;
+          padding: 28px 0;
+        }
+        @include desktop {
+          row-gap: 28px;
+        }
+      }
+
+      &__img {
+        display: block;
+        width: 47px;
+        height: 47px;
+
+        @include tablet {
+          width: 52px;
+          height: 52px;
+
+        }
+
+        @include desktop {
+          width: 58px;
+          height: 58px;
+        }
+      }
+
+      &__info {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        justify-content: center;
+        align-items: center;
+
+        @include desktop {
+          row-gap: 24px;
+        }
+
+        &__title {
+          display: block;
+          font-family: 'Poppins', serif;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 140%;
+          text-align: center;
+          color: #272727;
+
+          @include desktop {
+            font-size: 16px;
+
+          }
+
+        }
+
+        &__desc {
+          font-family: 'Poppins', serif;
+          font-weight: 400;
+          font-size: 10px;
+          line-height: 160%;
+          text-align: center;
+          color: #272727;
+
+          @include tablet {
+            font-size: 12px;
+          }
+
+          @include desktop {
+            font-size: 14px;
+          }
+        }
+
+      }
+    }
+
+    &__arrow {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transform: translateY(-194%);
+      @include tablet {
+        transform: translateY(-212%);
+
+      }
+      @include desktop {
+        transform: translateY(-248%);
+
+      }
+
+      &__left {
+        display: block;
+        width: 39px;
+        height: 39px;
+        background-image: url(../../../assets/products/tab/left_arrow.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        transform: translateX(-100%);
+        cursor: pointer;
+      }
+
+      &__right {
+        display: block;
+        width: 39px;
+        height: 39px;
+        background-image: url(../../../assets/products/tab/right_arrow.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        transform: translateX(100%);
+        cursor: pointer;
+      }
+
+    }
+
+    &__dots {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      column-gap: 8px;
+      z-index: 9;
+      transform: translateY(-200%);
+
+      &__dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        cursor: pointer;
+        background-color: #FFD9CC;
+
+        &__active {
+          background-color: #FF6F3F;
+        }
+      }
+
+    }
+
+  }
+
+}
+
